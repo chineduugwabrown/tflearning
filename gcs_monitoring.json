@@ -1,0 +1,46 @@
+{
+  "name": "projects/practice-project-338002/alertPolicies/17222738013765939837",
+  "displayName": "GCS Alert",
+  "documentation": {
+    "content": "Alert on call when large volume of bytes is dropped in storage",
+    "mimeType": "text/markdown"
+  },
+  "userLabels": {},
+  "conditions": [
+    {
+      "name": "projects/practice-project-338002/alertPolicies/17222738013765939837/conditions/17222738013765942700",
+      "displayName": "GCS Bucket - Total bytes",
+      "conditionThreshold": {
+        "aggregations": [
+          {
+            "alignmentPeriod": "300s",
+            "perSeriesAligner": "ALIGN_MEAN"
+          }
+        ],
+        "comparison": "COMPARISON_GT",
+        "duration": "0s",
+        "filter": "resource.type = \"gcs_bucket\" AND metric.type = \"storage.googleapis.com/storage/total_bytes\"",
+        "thresholdValue": 10,
+        "trigger": {
+          "count": 1
+        }
+      }
+    }
+  ],
+  "alertStrategy": {
+    "autoClose": "604800s"
+  },
+  "combiner": "OR",
+  "enabled": true,
+  "notificationChannels": [
+    "projects/practice-project-338002/notificationChannels/3671206063464865393"
+  ],
+  "creationRecord": {
+    "mutateTime": "2022-10-31T17:57:52.739196157Z",
+    "mutatedBy": "chinedu.ugwabrown@gmail.com"
+  },
+  "mutationRecord": {
+    "mutateTime": "2022-10-31T17:57:52.739196157Z",
+    "mutatedBy": "chinedu.ugwabrown@gmail.com"
+  }
+}
