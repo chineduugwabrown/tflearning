@@ -8,6 +8,6 @@ terraform {
 }
 
 provider "google" {
-  project     = "my-project-id"
+  project     = "practice-project-338002"
   region      = "us-central1"
 }
