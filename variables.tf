@@ -4,8 +4,9 @@ variable "project_id" {
   default = "practice-project-338002"
 }
 
+
 # variable "email" {
-#   description = "the id of the project"
+#   description = "the id of the email"
 #   type = "string"
 #   default = "lekcubcontinental@gmail.com"
 # }
